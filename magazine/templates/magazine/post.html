@@ -1,0 +1,11 @@
+{% extends 'magazine/base.html' %}
+
+{% block content %}
+<h1>{{post.title}}</h1>
+
+{% if post.photo_magazine %}
+<p><img class="img-article-left" src="{{post.photo_magazine.url}}"></p>
+{% endif %}
+
+{{post.content|linebreaks}}
+{% endblock %}
